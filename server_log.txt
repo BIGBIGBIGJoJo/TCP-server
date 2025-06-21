@@ -1,0 +1,36 @@
+Connection from client IP: ('127.0.0.1', 451)
+Access time: Sat, 26 Apr 2025 17:40:00 GMT
+Request file: ./public/file1.html
+Response: 200 OK
+
+
+Connection from client IP: ('127.0.0.1', 451)
+Access time: Sat, 26 Apr 2025 17:40:13 GMT
+Request file: ./public/file1.html
+Response: 304 Not Modified
+
+
+Connection from client IP: ('127.0.0.1', 451)
+Access time: Sat, 26 Apr 2025 18:00:29 GMT
+Request file: ./private/file2.html
+Response: 403 Forbidden
+
+
+Connection from client IP: ('127.0.0.1', 451)
+Access time: Sat, 26 Apr 2025 18:04:33 GMT
+Request file: ./public/file1.html
+Response: 415 Unsupported Media Type
+
+
+Connection from client IP: ('127.0.0.1', 451)
+Access time: Sat, 26 Apr 2025 18:10:01 GMT
+Request file: ./pubilc/file1.html
+Response: 400 Bad request
+
+
+Connection from client IP: ('127.0.0.1', 451)
+Access time: Sat, 26 Apr 2025 18:12:15 GMT
+Request file: ./private/image.png
+Response: 200 OK
+
+

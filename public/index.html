@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Raw Socket HTTP Demo</title>
+    <link rel="stylesheet" href="/demo.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">TCPServer.py</p>
+          <h1>Raw Socket HTTP Demo</h1>
+        </div>
+        <div class="server-pill" id="serverOrigin">127.0.0.1:12346</div>
+      </header>
+
+      <section class="workspace" aria-label="HTTP request demo">
+        <form class="request-panel" id="requestForm">
+          <div class="field-row">
+            <label for="method">Method</label>
+            <select id="method" name="method">
+              <option>GET</option>
+              <option>HEAD</option>
+              <option>POST</option>
+            </select>
+          </div>
+
+          <div class="field-row path-row">
+            <label for="path">Path</label>
+            <input id="path" name="path" type="text" value="/public/file1.html" autocomplete="off">
+          </div>
+
+          <div class="field-row">
+            <label for="headers">Headers</label>
+            <textarea id="headers" name="headers" spellcheck="false">Accept: text/html</textarea>
+          </div>
+
+          <div class="button-grid" aria-label="Example requests">
+            <button type="button" class="preset" data-preset="public">Public GET</button>
+            <button type="button" class="preset" data-preset="head">HEAD</button>
+            <button type="button" class="preset" data-preset="private403">Private 403</button>
+            <button type="button" class="preset" data-preset="private200">Private 200</button>
+            <button type="button" class="preset" data-preset="notModified">304</button>
+            <button type="button" class="preset" data-preset="unsupported">405</button>
+          </div>
+
+          <button class="send-button" type="submit">Send Request</button>
+        </form>
+
+        <section class="response-panel" aria-live="polite">
+          <div class="status-strip">
+            <div>
+              <span class="label">Status</span>
+              <strong id="statusCode">Ready</strong>
+            </div>
+            <div>
+              <span class="label">Method</span>
+              <strong id="methodEcho">GET</strong>
+            </div>
+            <div>
+              <span class="label">Time</span>
+              <strong id="duration">0 ms</strong>
+            </div>
+          </div>
+
+          <div class="response-grid">
+            <article>
+              <h2>Request</h2>
+              <pre id="requestPreview">GET /public/file1.html HTTP/1.1
+Accept: text/html</pre>
+            </article>
+            <article>
+              <h2>Response Headers</h2>
+              <pre id="responseHeaders">No response yet.</pre>
+            </article>
+          </div>
+
+          <article class="body-panel">
+            <h2>Response Body</h2>
+            <pre id="responseBody">Send a request to inspect the body.</pre>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="/demo.js"></script>
+  </body>
+</html>
